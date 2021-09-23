@@ -20,6 +20,7 @@ Binary to Decimal Algorithm
 
 Decimal to Binary Algorithm
 
-1) While n is not 0:
-1.1) f(n/2) 
-1.2) Print n%2
+1) Define algorithm f(x)
+2) If x is not equal to 0:
+2.1) Call f(x//2)
+2.2) Print (x%2)
