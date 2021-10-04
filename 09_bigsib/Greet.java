@@ -26,33 +26,12 @@ UNRESOLVED QUESTIONS
 
 public class Greet {
 	public static void main(String[] args){
-		BigSib.greet("Jacob");
-		BigSib.greet("Amir");
+		BigSib.greet("Lior");
+		BigSib.greet("Alif");
 		BigSib.greet("Josiah");
-
-		/*
-		The purpose of this comment is to document my attempts at calling class Queso (see below) even though Queso.java isn't in 09_bigsib
-		Queso.main(null);
-		Calling Queso.main gave me ALOT of trouble, ended up intertrashing to find null.
-		String[] foo={"abcd"};
-		Queso.main(foo);
-		This worked, since foo is a String[]
-		*/
 	}
 
 	public static void greet(String name) {
 		System.out.println("Josiah gives you a warm welcome, "+name);
 	}
 }
-
-/*
-Queso.java:
-public class Queso {
-	public static void main(String[] args){
-		System.out.println("No hablo queso");
-	}
-	public static void queso(){
-		System.out.println("No hablo queso");
-	}
-}
-*/
