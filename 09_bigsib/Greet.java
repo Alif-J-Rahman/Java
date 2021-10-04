@@ -15,6 +15,7 @@ DISCOVERIES
  I believe racket allows you to reference things by their "code" names, is this another difference between compiled and interpreted languages?
 -You can reference classes with just their .class files
 -You can't pull files ignored by .gitignore with a standard pull command from github
+
 UNRESOLVED QUESTIONS
 -Null?
 -Why is main so hard to reference? I tried inputting {""} and {"foo"} to be a String[] but it didn't work
@@ -26,11 +27,36 @@ UNRESOLVED QUESTIONS
 
 public class Greet {
 	public static void main(String[] args){
-		BigSib.greet("Lior");
-		BigSib.greet("Alif");
+		BigSib.greet("Jacob");
+		BigSib.greet("Amir");
 		BigSib.greet("Josiah");
+
+		/*
+		The purpose of this comment is to document my attempts at calling class Queso (see below) even though Queso.java isn't in 09_bigsib
+
+		Queso.main(null);
+		Calling Queso.main gave me ALOT of trouble, ended up intertrashing to find null.
+
+		String[] foo={"abcd"};
+		Queso.main(foo);
+		This worked, since foo is a String[]
+		*/
 	}
+
 	public static void greet(String name) {
 		System.out.println("Josiah gives you a warm welcome, "+name);
 	}
 }
+
+/*
+Queso.java:
+
+public class Queso {
+	public static void main(String[] args){
+		System.out.println("No hablo queso");
+	}
+	public static void queso(){
+		System.out.println("No hablo queso");
+	}
+}
+*/
