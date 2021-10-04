@@ -29,6 +29,7 @@ public class Greet {
 		BigSib.greet("Lior");
 		BigSib.greet("Alif");
 		BigSib.greet("Josiah");
+	}
 	public static void greet(String name) {
 		System.out.println("Josiah gives you a warm welcome, "+name);
 	}
