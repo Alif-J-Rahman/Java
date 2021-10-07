@@ -18,27 +18,20 @@ public class Greet{
   String greeting2;
   String greeting3;
 
-  BigSib richard = new BigSib();
+  BigSib richard = new BigSib("Word Up");
 //richard.setHelloMsg("Word up"); we don't need this because of constructor method added to BigSib.java
-
   greeting = richard.greet("freshman");
   System.out.println(greeting);
 
-  BigSib robert = new BigSib();
-  robert.setHelloMsg("Salutations");
-
+  BigSib robert = new BigSib("Salutations");
   greeting1 = robert.greet("Dr. Spaceman");
   System.out.println(greeting1);
 
-  BigSib raymond = new BigSib();
-  raymond.setHelloMsg("Hey ya");
-
+  BigSib raymond = new BigSib("Hey ya");
   greeting2 = raymond.greet("Kong Fooey");
   System.out.println(greeting2);
 
-  BigSib russel = new BigSib();
-  russel.setHelloMsg("Sup");
-
+  BigSib russel = new BigSib("Sup");
   greeting3 = russel.greet("mom");
   System.out.println(greeting3);
 
