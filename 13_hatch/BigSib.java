@@ -1,5 +1,5 @@
 /*
-Excellent Apples: Ariella Katz, Tom, Alif, Grippy
+Excellent Apples: Ariella Katz, Tom, Alif Rahman, Grippy
 APCS
 HW13 -- Constructor methods
 */
