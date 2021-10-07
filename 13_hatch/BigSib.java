@@ -13,8 +13,10 @@ How does the computer know to invoke the constructor method whenever a new insta
 
 public class BigSib {
  String helloMsg; //declares instance variable helloMsg (of type String)
- helloMsg = "Word up"; //sets "Word up" as the default helloMsg whenever there is a new instance of BigSib
 
+ public BigSib() {
+  helloMsg = "Word up"; //sets "Word up" as the default helloMsg whenever there is a new instance of BigSib
+ }
 
  public void setHelloMsg(String msg) { //note that neither this method nor the one below is static
   helloMsg = msg; //sets helloMsg to whatever msg is inputted as the argument to method setHelloMsg
