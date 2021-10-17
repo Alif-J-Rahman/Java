@@ -15,7 +15,7 @@ Team NAW Fam's Latest and Greatest Q3 Response:
 One test could be to use the toString() method. It's literal pupose is to return the string representation of an Object.
 Ex.
 public String toString() {
-      return nakib
+      return fullName
 }
 */
 
