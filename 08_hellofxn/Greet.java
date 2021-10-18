@@ -20,6 +20,6 @@ public class Greet {
     greet("Lior");
     }
   public static void greet(String name){
-    System.out.println("Why, hello there, " + name + ". How do you do?");
+    System.out.println("Why, hello there, " + name + ". How do you do, good sir?");
     }
 }
