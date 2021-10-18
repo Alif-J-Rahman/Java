@@ -12,11 +12,7 @@ QCC:
 Team NAW Fam's Latest and Greatest Q2 Response:
 We know that java has a default constructor because we were able to create a new instance of a class without using the "new" KEYWORD without creating any constructors for HW12.
 Team NAW Fam's Latest and Greatest Q3 Response:
-One test could be to use the toString() method. It's literal pupose is to return the string representation of an object.
-Ex.
-public String toString() {
-      return fullName
-}
+We think that you can try to create an instance of the object and do System.out.println(<objectName>). Whatever it prints is the string representation of the object.
 */
 
 public class BankAccount {
