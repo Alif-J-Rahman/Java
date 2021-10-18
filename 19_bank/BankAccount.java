@@ -47,9 +47,13 @@ public class BankAccount {
   }
 
   public int setAcctNum( int newAcctNum ) {
+    if (newAcctNum > 100000000 and newAcctNum < 999999999) {
     int oldAcctNum = acctNum;
     acctNum = newAcctNum;
     return oldAcctNum;
+    }
+    else {
+
   }
 
   public double setBalance( double newBalance ) {
@@ -88,9 +92,8 @@ public class BankAccount {
     BankAccount ba = new BankAccount();
     ba.setName("Lucid");
     ba.setPasswd("Lucid123");
-    ba.setAcctNum(1007);
-    short shortPin = 1234;
-    ba.setPin(shortPin);
+    ba.setAcctNum(333666999);
+    ba.setPin((short) 1234);
     ba.setBalance(235.12);
     ba.deposit(10);
     ba.withdraw(9);
