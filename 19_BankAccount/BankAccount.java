@@ -1,8 +1,17 @@
 /**
-   Clyde "Thluffy" Sinclair
-   APCS pd0
+   TNPG: NAW Fam (Alif Rahman, Nakib Abedin)
+   APCS pd06
    HW18 -- building a more meaningful class
    2021-10-18
+   
+   Discoveries:
+   1) There is no keyword "And" in Java. We need to use "&".
+   2) If a method will return a boolean value, its returnType needs to be boolean
+   3) A nested if statement can accomplish the same functionality as the & keyword
+   
+   QCC:
+   1) Why do each of the set<Var> methods return the old value of the variables? Is there a reason why this is the case? Wouldn't it make more sense to return the new values?
+   Tasks Accomplished:
    instance variables for storing...
    account holder's full name
    account password
@@ -42,20 +51,35 @@ public class BankAccount {
 
   public short setPin( short newPin ) {
     short oldPin = pin;
-    pin = newPin;
-    return oldPin;
+    if (newPin >= 1000 & newPin < 9999){
+    	pin = newPin;
+    	return oldPin;
+    } else {
+	pin = 9999;
+	System.out.println("The pin number should be exactly 4 digits");
+    	return oldPin;  
+    }
   }
 
   public int setAcctNum( int newAcctNum ) {
-    int oldAcctNum = acctNum;
-    if (newAcctNum > 100000000 and newAcctNum < 999999999) {
-    acctNum = newAcctNum;
-    }
-    else {
-    acctNum = 999999999
-    }
-    return oldAcctNum;
+    	int oldAcctNum = acctNum;
+	int newAcctNumBoolean = newAcctNum;
+    	if (newAcctNumBoolean >= 100000000){
+    		if (newAcctNumBoolean < 999999999){
+			acctNum = newAcctNum;
+    			return oldAcctNum;
+		}else {
+         acctNum =  999999999;
+			System.out.println ("Account Number out of bounds. Must be 9 digits.");
+			return oldAcctNum;
+		}
+		
+	}else {
+		System.out.println("Account Number out of bounds. Must be 9 digits.");
+		acctNum =  999999999;
+		return oldAcctNum;
 
+	}
   }
 
   public double setBalance( double newBalance ) {
@@ -70,10 +94,25 @@ public class BankAccount {
     balance = balance + depositAmount;
   }
 
-  public void withdraw( double withdrawAmount ) {
-    balance = balance - withdrawAmount;
+  public boolean withdraw( double withdrawAmount ) {
+    if(withdrawAmount <= balance){
+	balance = balance - withdrawAmount;
+	return true;
+    }else {
+	System.out.println("ERROR: Nah Fam, You don't got enough dough");
+	return false;	
+	}
   }
 
+  public boolean authenticate(int acctNumInfo, String pswdInfo){
+	if (acctNum == acctNumInfo & passwd == pswdInfo){
+		System.out.println("Account Number and Password Correct");
+		return true;
+	}else {
+		System.out.println("Account Number or Password incorrect");
+		return false;	
+	} 
+	}
 
   //overwritten toString()
   public String toString() {
@@ -94,11 +133,12 @@ public class BankAccount {
     BankAccount ba = new BankAccount();
     ba.setName("Lucid");
     ba.setPasswd("Lucid123");
-    ba.setAcctNum(333666999);
-    ba.setPin((short) 1234);
+    ba.setAcctNum(1333666999);
+    ba.setPin((short) 12345);
     ba.setBalance(235.12);
     ba.deposit(10);
-    ba.withdraw(9);
+    ba.withdraw(1000);
+    ba.authenticate(1333666999, "Lucid123");
     System.out.println(ba.toString());
   }//end main()
 
