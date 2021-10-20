@@ -6,14 +6,20 @@ HW 20 -- External Audit
 
 Discoveries:
 1) Java interprets literals that start with "0" as octal values.
+2) A unique error is PRINTED when some variables aren't initialized and using methods that require variables to be initialized.
+Error:
+Exception in thread "main" java.lang.NullPointerException
+at BankAccount.withdraw(BankAccount.java:89)
+at Teller.main(Teller.java:56)
 
 QCC:
-1) What does the error mean when we stress the withdraw fucntion?
+1) Why is the error above printed instead of recognized as a syntax error?
 */
 
 public class Teller {
 	public static void main(String[] args) {
 		// Can Josiah Beautify?'s code block for the main method below
+
 		/*
 		BankAccount cjb = new BankAccount("Lawrence Parker", 123456789, 3579, "password", -42.0);
 		cjb.printInfo();
@@ -38,8 +44,18 @@ public class Teller {
 		*/
 
 		BankAccount hackerLol = new BankAccount();
-		hackerLol.setAccountNum(001000000); //We don't think you wanted your function to return 262144 with this input
-  	hackerLol.setPin(0123); // We assume that this input isn't meant to be 83
+		hackerLol.setName("Can Josiah Beautify?");
+		hackerLol.setAccountNum(226238705);
+		hackerLol.setPin(8191);
+		hackerLol.setPassword("hackme");
+		hackerLol.setBalance(4200.0);
+		hackerLol.printInfo();
+
+		// Testing
+
+		hackerLol.setAccountNum(001000000); // We don't think you wanted your function to return 262144 with this input.
+  	hackerLol.setPin(0123); // We assume that this input isn't meant to be 83.
+		hackerLol.printInfo();
 
 		/*
 
@@ -53,18 +69,23 @@ public class Teller {
 
 		*/
 
-		hackerLol.withdraw(10000000000.00);
+		hackerLol.setAccountNum(0); // Account Number should not be allowed to have less than 9 digits.
+		hackerLol.setPin(0); // PIN Number should not be allowed to have less than 4 digits.
+		hackerLol.printInfo();
 
 		/*
 
-		This returns an unusual error whose meaning we do not know.
-		Error:
-		Exception in thread "main" java.lang.NullPointerException
-    at BankAccount.withdraw(BankAccount.java:89)
-    at Teller.main(Teller.java:56)
+		To solve these issues, modify the interval in the setAccountNum and setPin methods.
 
 		*/
+
+		hackerLol.setPassword("password") // The password is depicted as password + "SECURITY COMPRIMISED!!!" when it should just be password.
 		hackerLol.printInfo();
 
+		/*
+
+		To solve this issue, modify the printInfo method to just include password when printing out account info.
+
+		*/
 	}
 }
