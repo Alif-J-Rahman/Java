@@ -1,7 +1,7 @@
 /**
    TNPG: NAW Fam (Alif Rahman, Nakib Abedin)
    APCS pd06
-   HW18 -- building a more meaningful class
+   HW19 -- Mo Money Mo Problems ...MORE AWESOME
    2021-10-18
    
    Discoveries:
