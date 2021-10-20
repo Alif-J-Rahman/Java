@@ -60,8 +60,8 @@ public class Teller {
 		This returns an unusual error whose meaning we do not know.
 		Error:
 		Exception in thread "main" java.lang.NullPointerException
-        at BankAccount.withdraw(BankAccount.java:89)
-        at Teller.main(Teller.java:56)
+    at BankAccount.withdraw(BankAccount.java:89)
+    at Teller.main(Teller.java:56)
 
 		*/
 		hackerLol.printInfo();
