@@ -14,7 +14,7 @@ QCC:
 public class Teller {
 	public static void main(String[] args) {
 		// Can Josiah Beautify?'s code block for the main method below
-		/* 
+		/*
 		BankAccount cjb = new BankAccount("Lawrence Parker", 123456789, 3579, "password", -42.0);
 		cjb.printInfo();
 		cjb.setName("Can Josiah Beautify?");
@@ -53,7 +53,7 @@ public class Teller {
 		
 		*/
 
-		hackerLol.withdraw(10000000000.00);
+		//hackerLol.withdraw(10000000000.00);
 		//hackerLol.printInfo();
 	}
 }
