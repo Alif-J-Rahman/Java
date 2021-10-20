@@ -8,7 +8,7 @@ Discoveries:
 1) Java interprets literals that start with "0" as octal values.
 
 QCC:
-1)
+1) What does the error mean when we stress the withdraw fucntion?
 */
 
 public class Teller {
@@ -36,24 +36,35 @@ public class Teller {
 		//System.out.print(cjb + " hello");
 		//System.out.println(cjb.toString());
 		*/
-		
+
 		BankAccount hackerLol = new BankAccount();
 		hackerLol.setAccountNum(001000000); //We don't think you wanted your function to return 262144 with this input
-		hackerLol.setPin(0123); // We assume that this input isn't meant to be 83 
-		
+  	hackerLol.setPin(0123); // We assume that this input isn't meant to be 83
+
 		/*
-		
+
 		We included the two method calls above even though we don't fully why it breaks the code. All we have deduced so far is
 		that int arguments that start with the digit 0 get converted into something else, but we don't know exactly what it gets
-		converted to. We counsulted Piazza and hopefully we will have an answer soon. UPDATE: From the help of our classmates in 
+		converted to. We counsulted Piazza and hopefully we will have an answer soon. UPDATE: From the help of our classmates in
 		Piazza, we now now that the error occured because Java interprets literals that start with "0" as octal values.
-		
+
 		To solve these issues you can set the minimum value for a pin to be greater than or equal to 1000 and the max to be less than 10000
 		Likewise, you can set the minimum value for an account number to 100000000 the maximum as 999999999.
-		
+
 		*/
 
-		//hackerLol.withdraw(10000000000.00);
-		//hackerLol.printInfo();
+		hackerLol.withdraw(10000000000.00);
+
+		/*
+
+		This returns an unusual error whose meaning we do not know.
+		Error:
+		Exception in thread "main" java.lang.NullPointerException
+        at BankAccount.withdraw(BankAccount.java:89)
+        at Teller.main(Teller.java:56)
+
+		*/
+		hackerLol.printInfo();
+
 	}
 }
