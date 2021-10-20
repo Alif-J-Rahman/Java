@@ -54,6 +54,6 @@ public class Teller {
 		*/
 
 		hackerLol.withdraw(10000000000.00);
-		hackerLol.printInfo();
+		//hackerLol.printInfo();
 	}
 }
