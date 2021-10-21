@@ -22,7 +22,7 @@ public class StatsDriver {
 		System.out.println(Stats.mean(6, 4));
 		System.out.println("expecting 5");
 		System.out.println(Stats.mean(6, 6));
-		System.out.println("6");
+		System.out.println("expecting 6");
 		System.out.println(Stats.mean(12.0, 15.0));
 		System.out.println("expecting 13.5");
 		// System.out.println(Stats.mean());

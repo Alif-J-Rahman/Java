@@ -1,5 +1,3 @@
-import java.lang.Math;
-
 /*
    TNPG: NAW FAM -- ALIF RAHMAN, GRIPPY (ducky), NAKIB ABEDIN, JOKER (ducky)
    APCS
@@ -14,7 +12,7 @@ import java.lang.Math;
    - Java automatically floor divides when dividing two ints. i.e. 3/2 -> 1
    - Typecasting changes the type of the literal.
    QCC
-   - We didn't see a way to calculate geoMean() without using the class Math. 
+   - We didn't see a way to calculate geoMean() without using the class Math.
    - How would you convert the sqrt (which is a double) into an int without typecasting?
    
  */
@@ -34,7 +32,7 @@ public class Stats {
   }
 
   public static int max(int a, int b) {
-	if (a > b){ 
+	if (a > b) {
 		return a;
 	}else{
 		return b;
@@ -51,7 +49,8 @@ public class Stats {
 
   public static int geoMean(int a, int b) {
 	int product = a * b;
-	int gmean = (int) Math.sqrt(product);
+	int gmean;
+	while 
 	return gmean;
   }
 
@@ -61,7 +60,7 @@ public class Stats {
 	double gmean = Math.sqrt(product);
 	return gmean;
   }
- 
+
   public static int max(int a, int b, int c) {
 	if (a > c & a > b){
 		return a;
@@ -86,7 +85,6 @@ public class Stats {
 	int product = a * b * c;
 	int gmean = (int) Math.sqrt(product);
 	return gmean;
-	
   }
   public static double geoMean(double a, double b, double c) {
 	double product = a * b * c;
