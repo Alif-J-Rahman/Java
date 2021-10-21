@@ -1,6 +1,6 @@
 import java.lang.Math;
 
-/**
+/*
    TNPG: NAW FAM -- ALIF RAHMAN, GRIPPY (ducky), NAKIB ABEDIN, JOKER (ducky)
    APCS
    HW21 -- STAtisTically Speaking...
@@ -17,7 +17,7 @@ import java.lang.Math;
    - We didn't see a way to calculate geoMean() without using the class Math. 
    - How would you convert the sqrt (which is a double) into an int without typecasting?
    
- **/
+ */
 
 public class Stats {
 
