@@ -9,6 +9,14 @@ import java.lang.Math;
    Implement each method without typecasting.
    xtra: harmonic mean is the reciprocal of the
    arithmetic mean of the reciprocals
+   
+   DISCO
+   - Java automatically floor divides when dividing two ints. i.e. 3/2 -> 1
+   - Typecasting changes the type of the literal.
+   QCC
+   - We didn't see a way to calculate geoMean() without using the class Math. 
+   - How would you convert the sqrt (which is a double) into an int without typecasting?
+   
  **/
 
 public class Stats {
