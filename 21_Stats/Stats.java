@@ -43,7 +43,7 @@ public class Stats {
 
   public static int geoMean(int a, int b) {
 	int product = a * b;
-	int gmean = Math.pow(product);
+	int gmean = Math.sqrt(product);
 	return gmean;
   }
 
