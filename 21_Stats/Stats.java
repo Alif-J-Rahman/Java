@@ -76,7 +76,7 @@ public class Stats {
   }
   public static int geoMean(int a, int b, int c) {
 	int product = a * b * c;
-	int gmean = Math.sqrt(product);
+	int gmean = (int) Math.sqrt(product);
 	return gmean;
 	
   }
@@ -87,7 +87,7 @@ public class Stats {
   }
   //main method for testing functionality
   public static void main( String[] args ) {
-	System.out.print("StatsLol");
+	System.out.print("Stats");
   }
 
 
