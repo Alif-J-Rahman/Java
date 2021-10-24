@@ -1,4 +1,9 @@
 /***
+    TNPG: NAW Fam: Alif Rahman, Nakib Abedin
+    APCS Period 06
+    HW23 -- What does equality look like?
+    2021-10-24
+    Time Spent: 1.5 hour
     driver for class Coin
     ~~~ SUGGESTED WORKFLOW: ~~~
     1. Compile this file and run. Note anything notable.
@@ -26,7 +31,7 @@ public class Driver {
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
       //test flip() method
-      System.out.println("\nAfter flipping...");
+      System.out.println("After flipping...");
       yours.flip();
       wayne.flip();
       System.out.println("yours: " + yours);
@@ -39,8 +44,13 @@ public class Driver {
         System.out.println( "No match. Firestarter you can not be." );
       }
       // bias is 0.0 since we did not define it. Hence, they will always match.
+      System.out.println("Now with bias = 0.5...");
       yours.bias = 0.5;
       wayne.bias = 0.5;
+      yours.flip();
+      wayne.flip();
+      System.out.println("yours: " + yours);
+      System.out.println("wayne: " + wayne);
       // tests equals() method with bias as 0.5
       if ( yours.equals(wayne) ) {
         System.out.println( "Matchee matchee!" );
@@ -48,9 +58,6 @@ public class Driver {
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
-
-
-
 
   }//end main()
 

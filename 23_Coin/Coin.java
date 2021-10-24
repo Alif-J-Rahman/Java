@@ -3,7 +3,7 @@
  APCS Period 06
  HW23 -- What does equality look like?
  2021-10-24
- Time Spent: 1.0 hour
+ Time Spent: 1.5 hour
  ***/
 
 public class Coin {
