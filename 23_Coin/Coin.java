@@ -4,6 +4,10 @@
  HW23 -- What does equality look like?
  2021-10-24
  Time Spent: 1.5 hour
+ DISCO
+   - You can use an instance of a class as a parameter.
+ QCC
+   - How do we make this code work with bias as a public variable.
  ***/
 
 public class Coin {
