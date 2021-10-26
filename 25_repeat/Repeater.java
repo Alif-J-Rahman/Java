@@ -22,7 +22,7 @@ public class Repeater {
       counter ++;
     }
     return answer;
-  }
+  } 
 
   public static String fenceR(int numPosts) {
     if (numPosts == 1) {
@@ -40,18 +40,4 @@ public class Repeater {
       System.out.println(fenceR(i));
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+} //end of class
