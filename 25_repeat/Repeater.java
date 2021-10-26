@@ -40,4 +40,5 @@ public class Repeater {
       System.out.println(fenceR(i));
     }
   }
+
 } //end of class
