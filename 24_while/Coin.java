@@ -1,20 +1,26 @@
 /***
  TNPG: NAW Fam: Alif Rahman, Nakib Abedin
  APCS Period 06
- HW23 -- What does equality look like?
- 2021-10-24
- Time Spent: 1.5 hour
- DISCOVERIES:
- 1) You can have an object as an argument for a method
- Questions:
- 1) Did we use bias correctly for the flip() method?
- 2) Did we code the reset() method correctly?
+ HW24--Get It While You Can
+ 2021-10-25
+ Time Spent: 1.5 hr
+ Discoveries:
+ 0) || essentially means "or" in java.
+ 1) we can use the get<varName> methods in order to get the value of a private variable from a different class.
+ 2) we refreshed our brains on how while loops work. The flowchart from class really helped clarify some misconceptions.
+ QCC:
+ 0) Isn't having 65536 as the number of matches extraneous? We would need to replace it with a number divisible by our birth year either way.
+ Also, can't we just assign the first number after 65536 divisible by 2005 as y to make the code cleaner?
+ POST-v0 MODS:
+ 0)Added matchCtr variable to count the number of matches.
+ 1)Added getMatchCtr variable to count get the value of variable matchCtr.
+ 2)Aligned parts of our code (i.e the constructors, some methods) to match the handout you gave us in class.
  ***/
 
 public class Coin {
   private double value;
   private String upFace, name;
-  private int flipCtr, headsCtr, tailsCtr;
+  private int flipCtr, headsCtr, tailsCtr, matchCtr;
   private double bias = 0.5;
 
   //attributes aka instance vars
@@ -78,6 +84,10 @@ public class Coin {
 
   public int getTailsCtr() {
 	   return tailsCtr;
+  }
+
+  public int getMatchCtr() {
+	   return matchCtr;
   }
 
   // ----------------------------
@@ -152,7 +162,8 @@ public class Coin {
    * or both showing tails. False otherwise.
    ***/
   public boolean equals( Coin other ) {
-	   if (upFace == other.upFace){
+      if (upFace == other.upFace){
+       matchCtr += 1;
        return true;
      }else{
        return false;
