@@ -122,8 +122,8 @@ public class Stats {
   
   //main method for testing functionality
   public static void main( String[] args ) {
-	  System.out.println(public static int gcd(15,10));
-    System.out.println(public static int gcd(51,45));
+	System.out.println(int gcd(15,10));
+  	System.out.println(int gcd(51,45));
   }
 
 
