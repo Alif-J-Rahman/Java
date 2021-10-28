@@ -6,9 +6,9 @@
    TASK:
    time spent: 1.0 hour
    DISCO
-   - 
+   - If you mod a smaller number by a bigger number, the smaller number is returned.
    QCC
-   - 
+   -
  */
 
 public class Stats {
@@ -104,26 +104,45 @@ public class Stats {
         double gmean = Math.sqrt(product);
         return gmean;
   }
-  
+
   public static int gcd(int a, int b) {
     int answer;
     if (a > b) {
       answer = b;
-      while (a % answer != 0 && b % answer != 0) {
-        answer -= 1;
+      while (a % answer != 0 || b % answer != 0) {
+        answer = answer -1;
       }
     }else {
       answer = a;
-      while (a % answer != 0 && b % answer != 0) {
-        answer -= 1;
+      while (a % answer != 0 || b % answer != 0) {
+        answer =answer -1;
       }
+    }
      return answer;
   }
-  
+
+  public static int gcdER( int a, int b) {
+    if (a == 0) {
+      return b;
+    }
+      return gcdER(b%a, a);
+    }
+
+  public static int gcdEW( int a, int b) {
+    while (a > b) {
+			a -= b;
+		}
+		return a;
+}
+
   //main method for testing functionality
-  public static void main( String[] args ) {
-	System.out.println(int gcd(15,10));
-  	System.out.println(int gcd(51,45));
+  public static void main(String[] args) {
+    System.out.println(gcd(15,10));
+    System.out.println(gcd(45,51));
+    System.out.println(gcdER(15,10));
+    System.out.println(gcdER(45,51));
+    System.out.println(gcdEW(15,10));
+    System.out.println(gcdEW(45,51));
   }
 
 
