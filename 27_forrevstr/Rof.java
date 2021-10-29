@@ -31,6 +31,9 @@ public class Rof {
   }
   
   public static String reverseR(String s){
+    if (s.length() == 0){
+      return s;
+    }
       return s.substring(s.length()-1,s.length()) + reverseR(s.substring(0,s.length()-1));
   }
   
