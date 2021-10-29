@@ -14,24 +14,24 @@ How would we use for loop to calculate sum of arithmetic or geometric series?
 
 public class Rof {
   
-  public static String fenceF(int posts){
+  public static String fenceF (int posts) {
   	String fence = "|";
-  	for (int i = posts; i > 1; i -= 1){
+  	for (int i = posts; i > 1; i -= 1) {
   		fence += "--|";
   		}
   	return fence;
   }
   
-  public static String reverseF(String s){
+  public static String reverseF (String s) {
   	String p = "";
-  	for (int i = s.length(); i > 0; i -= 1){
+  	for (int i = s.length(); i > 0; i -= 1) {
   		p += s.substring(i-1,i);
   		}
   	return p;
   }
   
-  public static String reverseR(String s){
-    if (s.length() == 0){
+  public static String reverseR (String s) {
+    if (s.length() == 0) {
       return s;
     }
       return s.substring(s.length()-1,s.length()) + reverseR(s.substring(0,s.length()-1));
