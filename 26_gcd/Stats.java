@@ -128,21 +128,13 @@ public class Stats {
       return gcdER(b%a, a);
     }
 
-	public static int gcdEW( int a, int b) {
-		aNew = a;
-		bNew = b;
-		while (aNew != 0) {
-		return 0;
-		}
-	}
-/*
   public static int gcdEW( int a, int b) {
     while (a > b) {
-			a -= b;
-		}
-		return a;
+	a -= b;
+    }
+	return a;
 }
-*/
+
   //main method for testing functionality
   public static void main(String[] args) {
     System.out.println(gcd(15,10));
