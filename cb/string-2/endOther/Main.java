@@ -14,6 +14,16 @@ public class Main {
      * str.toLowerCase() returns the lowercase version of a string.
      */
     public static boolean endOther(String a, String b) {
-        
+      a = a.toLowerCase();
+      b = b.toLowerCase();
+      int aLen = a.length();
+      int bLen = b.length();
+      if (aLen >= bLen && a.substring(aLen-bLen).equals(b)) {
+        return true;
+      }
+      if (bLen > aLen && b.substring(bLen-aLen).equals(a)) {
+        return true;
+      }
+      return false;
     }
 }

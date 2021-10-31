@@ -12,6 +12,10 @@ public class Main {
      * there are two chars.
      */
     public static String doubleChar(String str) {
-        
+      String answer = "";
+      for (int i = 0; i < str.length(); i ++) {
+        answer += str.substring(i,i+1) + str.substring(i,i+1);
+      }
+      return answer;
     }
 }

@@ -12,6 +12,20 @@ public class Main {
      * in the given string.
      */
     public static boolean catDog(String str) {
-        
+      int catCtr = 0;
+      int dogCtr = 0;
+      boolean answer = false;
+      for (int i = 0; i < (str.length()-2); i++) {
+        if (str.substring(i,i+3).equals("cat")) {
+          catCtr ++;
+        }
+        if (str.substring(i,i+3).equals("dog")) {
+          dogCtr ++;
+        }
+      }
+      if (catCtr == dogCtr) {
+        answer = true;
+      }
+      return answer;
     }
 }

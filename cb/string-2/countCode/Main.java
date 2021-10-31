@@ -13,6 +13,12 @@ public class Main {
      * "cooe" count.
      */
     public static int countCode(String str) {
-        
+      int answer = 0;
+      for (int i = 0; i < str.length()-3; i++) {
+        if (str.substring(i, i+2).equals("co") && str.substring(i+3, i+4).equals("e")) {
+          answer ++;
+        }
+      }
+      return answer;
     }
 }

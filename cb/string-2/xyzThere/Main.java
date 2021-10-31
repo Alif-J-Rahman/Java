@@ -13,6 +13,14 @@ public class Main {
      * "x.xyz" does not.
      */
     public static boolean xyzThere(String str) {
-        
+      for (int i = 0; i < str.length()-2; i ++) {
+        if ((i == 0) && (str.substring(i, i+3).equals("xyz"))) {
+          return true;
+        }
+        if ((str.substring(i, i+3).equals("xyz")) && !(str.substring(i-1, i+3).equals(".xyz"))) {
+          return true;
+        }
+      }
+      return false;
     }
 }
