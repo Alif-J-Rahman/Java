@@ -14,6 +14,6 @@ public class Main {
      * at index i and going up to but not including index j.
      */
     public static String makeOutWord(String out, String word) {
-        
+        return out.substring(0,2) + word + out.substring(2,4);
     }
 }

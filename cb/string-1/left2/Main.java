@@ -12,6 +12,7 @@ public class Main {
      * are moved to the end. The string length will be at least 2.
      */
     public static String left2(String str) {
-        
+      String firstTwo = str.substring(0,2);
+      return str.substring(2) + firstTwo;
     }
 }

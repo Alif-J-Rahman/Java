@@ -12,6 +12,7 @@ public class Main {
      * of the original string. The string length will be at least 2.
      */
     public static String extraEnd(String str) {
-        
+      String answer = str.substring(str.length()-2);
+      return answer + answer + answer;
     }
 }

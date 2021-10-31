@@ -12,6 +12,6 @@ public class Main {
      * "Hello" yields "ell". The string length will be at least 2.
      */
     public static String withoutEnd(String str) {
-        
+          return str.substring(1, str.length()-1);
     }
 }

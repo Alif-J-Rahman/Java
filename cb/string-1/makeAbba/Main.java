@@ -12,6 +12,6 @@ public class Main {
      * the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
      */
     public static String makeAbba(String a, String b) {
-        
+        return a +  b + b + a;
     }
 }

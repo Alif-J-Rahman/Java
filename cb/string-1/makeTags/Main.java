@@ -14,6 +14,6 @@ public class Main {
      * string with tags around the word, e.g. "<i>Yay</i>".
      */
     public static String makeTags(String tag, String word) {
-        
+        return "<" + tag + ">" + word + "</" + tag + ">";
     }
 }

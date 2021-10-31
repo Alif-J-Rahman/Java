@@ -12,6 +12,6 @@ public class Main {
      * of each. The strings will be at least length 1.
      */
     public static String nonStart(String a, String b) {
-        
+          return a.substring(1) + b.substring(1);
     }
 }

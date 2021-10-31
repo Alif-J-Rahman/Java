@@ -12,6 +12,6 @@ public class Main {
      * "WooHoo" yields "Woo".
      */
     public static String firstHalf(String str) {
-        
+      return str.substring(0, str.length() / 2);
     }
 }
