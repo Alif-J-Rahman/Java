@@ -5,6 +5,11 @@
  * 2021-11-04
  * time spent: 1 hr
  *
+ * DISCO:
+ * 0) The .split() method for class String can splice the string (splicing is based on argument given). It returns an array.
+ * QCC:
+ * 0) Why is "y" not in vowels even though the title of HW 31 highlights that it is considered a vowel?
+ *
  * class Pig
  * a Pig Latin translator
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
