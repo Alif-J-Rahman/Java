@@ -13,7 +13,7 @@ How would we use for loop to calculate sum of arithmetic or geometric series?
 */
 
 public class Rof {
-  
+
   public static String fenceF (int posts) {
   	String fence = "|";
   	for (int i = posts; i > 1; i -= 1) {
@@ -21,7 +21,7 @@ public class Rof {
   		}
   	return fence;
   }
-  
+
   public static String reverseF (String s) {
   	String p = "";
   	for (int i = s.length(); i > 0; i -= 1) {
@@ -29,14 +29,14 @@ public class Rof {
   		}
   	return p;
   }
-  
+
   public static String reverseR (String s) {
     if (s.length() == 0) {
       return s;
     }
       return s.substring(s.length()-1,s.length()) + reverseR(s.substring(0,s.length()-1));
   }
-  
+
   public static void main(String[] args){
   	System.out.println(fenceF(3));
   	System.out.println(fenceF(0));
