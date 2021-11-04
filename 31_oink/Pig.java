@@ -4,11 +4,12 @@
  * HW31 -- Otnay Ybay ethay Airhay Onway Ymay Inneechay Inchay Inchay
  * 2021-11-04
  * time spent: 1 hr
- *
- * DISCO:
- * 0) The .split() method for class String can splice the string (splicing is based on argument given). It returns an array.
- * QCC:
- * 0) Why is "y" not in vowels even though the title of HW 31 highlights that it is considered a vowel?
+ Discoveries:
+ 1) We found out what a final variable does
+ 2) We got better at applying the forEach loop to different scenarios.
+ 3) We applied linear search
+ QCC:
+ 1) Should we have made our code applicable to capital case letters?
  *
  * class Pig
  * a Pig Latin translator
