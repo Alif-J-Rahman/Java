@@ -2,8 +2,8 @@
  * NAW FAM :: ALIF RAHMAN (assisted by GRIPPY) and NAKIB ABEDIN (assisted by JOKER)
  * APCS
  * HW31 -- Otnay Ybay ethay Airhay Onway Ymay Inneechay Inchay Inchay
- * 2021-11-04r
- * time spent: _hrs
+ * 2021-11-04
+ * time spent: 1 hr
  *
  * class Pig
  * a Pig Latin translator
