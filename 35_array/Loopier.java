@@ -31,16 +31,18 @@ public class Loopier {
 	}
 
 	public static String stringArray(int[] array) {
-		String ans = "";
-		for (int i = 0; i < array.length; i++) {
-			ans += array[i] + ", ";
+		String ans = "{"+ array[0];
+		for (int i = 1; i < array.length; i++) {
+			ans += ", " + array[i];
 		}
-		return ans.substring(0,ans.length()-2);
+		return ans + "}";
 	}
 
 	public static int linSearch(int[] a, int target) {
 		for (int i = 0; i < a.length; i++) {
-			if (a[i] == target) { return i; }
+			if (a[i] == target) { 
+				return i; 
+			}
 		}
 		return -1;
 	}
