@@ -105,7 +105,7 @@ public class Slots {
     =====================================*/
   public boolean jackpot()
   {
-    boolean retBoo = false;
+    boolean retBoo;
     retBoo = ((_fruits[0] == _fruits[1]) && (_fruits[1] == _fruits[2]));
     return retBoo;
   }
@@ -119,8 +119,8 @@ public class Slots {
     false otherwise    =====================================*/
   public boolean miniWin()
   {
-    boolean retBoo = false;
-    retBoo = (((_fruits[0] == _fruits[1]) && (_fruits[1] == _fruits[2])) ||
+    boolean retBoo;
+    retBoo = (( jackpot() ) ||
               ((_fruits[0] != _fruits[1]) && (_fruits[1] != _fruits[2]) &&
                (_fruits[0] != _fruits[2])));
     return retBoo;
