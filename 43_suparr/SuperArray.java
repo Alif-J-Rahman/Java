@@ -56,7 +56,6 @@ public class SuperArray
     }
     _data = _newData;
     _size = 2 * _size;
-    }
   }
 
 
