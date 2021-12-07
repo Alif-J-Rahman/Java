@@ -1,13 +1,25 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// ABA: Ariella Katz, Alif Rahman, Brianna Tieu, Tom, Grippy, Pepe
+// APCS
 // HW43 -- encapsulation (basic SuperArray functionality)
-// 2021-12-07t
+// 2021-12-06
+// time spent: 0.5 hrs
 
 /***************************
  * class SuperArray
  * Wrapper class for array. Facilitates resizing,
  * getting and setting element values.
  ***************************/
+
+/*
+DISCO:
+0. Although you can't alter the length of an array, arr, you can set arr = to
+   an array of a different length and arr will assume that length (there are
+   no compatibility issues with this).
+QCC:
+0. When running SuperArray in the terminal, is there a way to input via std
+   input (the command line) the desired array length to be inputted in the
+   constructor? 
+*/
 
 public class SuperArray
 {
@@ -19,7 +31,8 @@ public class SuperArray
   //default constructor – initializes 10-item array
   public SuperArray()
   {
-    _data = new int[]{0,1,2,3,4,5,6,7,8,9};
+    _data = new int[10];
+    _size = _data.length;
   }
 
 
@@ -27,7 +40,7 @@ public class SuperArray
   public String toString()
   {
     String ans = "[" + _data[0];
-    for (int i = 1; i < _data.length; i++) {
+    for (int i = 1; i < _size; i++) {
       ans += ", " + _data[i];
     }
     return ans + "]";
@@ -37,11 +50,12 @@ public class SuperArray
   //double capacity of SuperArray
   private void expand()
   {
-    SuperArray con = new SuperArray();
-    con._data = _data;
-    _data = new int[20];
-    for (int i = 0; i < 10; i++) {
-      _data[i] = con.get(i);
+    int[] _newData = new int[2 * _size];
+    for (int i = 0; i < _size; i++) {
+      _newData[i] = _data[i];
+    }
+    _data = _newData;
+    _size = 2 * _size;
     }
   }
 
@@ -80,6 +94,8 @@ public class SuperArray
       System.out.println("Printing expanded SuperArray curtis...");
       System.out.println(curtis);
       }
+      /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
       
   }//end main()
 
