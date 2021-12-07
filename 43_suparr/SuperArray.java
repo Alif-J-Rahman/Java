@@ -32,29 +32,31 @@ public class SuperArray
   public SuperArray()
   {
     _data = new int[10];
+    _size = _data.length;
   }
 
 
   //output SuperArray in [a,b,c] format
   public String toString()
   {
-    String str = "[";
-    for (int element : _data) {
-      str += element + ", ";
+    String ans = "[" + _data[0];
+    for (int i = 1; i < _size; i++) {
+      ans += ", " + _data[i];
     }
-    str = str.substring(0,str.length()-2) + "]";
-    return str;
+    return ans + "]";
   }
 
 
   //double capacity of SuperArray
   private void expand()
   {
-    int[] _newData = new int[2 * _data.length];
-    for (int i = 0; i < _data.length; i++) {
+    int[] _newData = new int[2 * _size];
+    for (int i = 0; i < _size; i++) {
       _newData[i] = _data[i];
     }
     _data = _newData;
+    _size = 2 * _size;
+    }
   }
 
 
@@ -69,7 +71,7 @@ public class SuperArray
   //           return old value at index
   public int set( int index, int newVal )
   {
-    int oldVal = _data[index];
+    int oldVal = get(index);
     _data[index] = newVal;
     return oldVal;
   }
@@ -78,6 +80,7 @@ public class SuperArray
   //main method for testing
   public static void main( String[] args )
   {
+
       SuperArray curtis = new SuperArray();
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
@@ -93,6 +96,7 @@ public class SuperArray
       }
       /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
+      
   }//end main()
 
 
