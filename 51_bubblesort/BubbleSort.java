@@ -11,16 +11,17 @@
  * Traverse the array from right to left, swapping as necessary.
  * Repeat until a traversal causes no swaps.
  * DISCO
- * Rather than creating local variable swaps, we could have created 
- * another for loop that repeats for the maximum number of passes 
+ * Rather than creating local variable swaps, we could have created
+ * another for loop that repeats for the maximum number of passes
  * (specified in the QCC section).
  * QCC
  * q0: If a pass requires no swaps, what do you know?
- * a0: It is fully sorted 
+ * a0: It is fully sorted
  * q1: After pass p, what do you know?
  * a1: The element at index p-1 is correct
  * q2: How many passes are necessary to completely sort?
  * a2: No more than length-1
+ *
  ******************************/
 
 import java.util.ArrayList;
@@ -56,6 +57,7 @@ public class BubbleSort
   }
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
   // VOID version of bubbleSort
   // Rearranges elements of input ArrayList
   // postcondition: data's elements sorted in ascending order
@@ -73,6 +75,7 @@ public class BubbleSort
     if (swaps > 0) { bubbleSortV(data); }
   }
 
+
   // ArrayList-returning bubbleSort
   // postcondition: order of input ArrayList's elements unchanged
   //                Returns sorted copy of input ArrayList.
@@ -82,6 +85,7 @@ public class BubbleSort
     bubbleSortV(sorted);
     return sorted;
   }
+
 
   public static void main( String [] args )
   {
@@ -110,14 +114,14 @@ public class BubbleSort
       glen.add(3);
       System.out.println( "ArrayList glen before sorting:\n" + glen );
       ArrayList glenSorted = bubbleSort( glen );
-      System.out.println( "sorted version of ArrayList glen:\n" 
+      System.out.println( "sorted version of ArrayList glen:\n"
       + glenSorted );
       System.out.println( "ArrayList glen after sorting:\n" + glen );
 
       ArrayList coco = populate( 10, 1, 1000 );
       System.out.println( "ArrayList coco before sorting:\n" + coco );
       ArrayList cocoSorted = bubbleSort( coco );
-      System.out.println( "sorted version of ArrayList coco:\n" 
+      System.out.println( "sorted version of ArrayList coco:\n"
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
       System.out.println( coco );
@@ -127,3 +131,4 @@ public class BubbleSort
   }//end main
 
 }//end class BubbleSort
+
