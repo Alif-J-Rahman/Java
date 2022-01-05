@@ -1,0 +1,31 @@
+Appendix D of Think Java / Debugging Notes
+------------------------------------------
+3 error types to consider while debugging:
+Compile-Time errors - indicate a syntax error
+Run-time errors - produced when something goes wrong w/ program running.
+Logic errors - causes the program to do the wrong thing / unexpected results.
+Compile-Time errors
+-------------------
+The best way to prevent these errors is Incremental Development.
+Start by fixing one error at a time (one semicolon might fix "100" errors).
+Read the error message --> if you can't understand terse jargon, you will at least know where the error is.
+Make sure you have the correct dev environment installed and that you compile the right file.
+You can always debug by bisection.
+Error messages sometimes provide the "wrong" solution.
+Run-Time errors
+---------------
+Your program is hanging --> problem is either infinite loop or recursion.
+For loop, adding print statements that show the condition of the variables as the loop goes on might help you realize why it's not breaking.
+For recursive, it causes a StackOverflow error most of the time.
+Check to see if there is a base case.
+Do the same thing you did in the loop --> if the variables don't seem to be going toward the base case, something is wrong.
+There are also exceptions --> a possibility from your code will not work (ex. dividing by zero).
+If there are too many print statements while debugging, clean up your code / simplify.
+Logic Errors
+------------
+Hard to find as the compiler and interpreter cannot help you here.
+Break down code to classes and methods --> similiar to debugging via bisection.
+Simplify big expressions by using variables / instance variables.
+Use println instead of print in some cases. 
+Take breaks while debugging.
+Get another pair of eyes - or get a ducky and debug with them by explaining the problem to them.
