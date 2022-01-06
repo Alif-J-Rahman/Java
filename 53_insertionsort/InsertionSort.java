@@ -1,16 +1,20 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Ameer Alnasser + Nakib Abedin + Alif Rahman
+// APCS pd06
 // HW53 -- implementing insertion sort
 // 2022-01-06r
-// time spent:  hrs
+// time spent: 1.0 hrs
 
 /******************************
  * class InsertionSort -- implements InsertionSort algorithm
  *
  * ALGO:
- *
+ *  1) Set the partition ( a marker which says all elements to one side are sorted ) to 1.
+ *  2) For each element in the unsorted region (rightmost index up to the partition), set the element to the index of the partition and compare it with each value before it.
+ *  3) if the value is less than the previous value, swap places with it. If you swap, repeat this step.
+ *  4) Once the partition reaches the end of the collection, the collection will thusly be sorted.
  * DISCO
- *
+ *  1) A partition is a dividng line.
+ *  2) We found for loops to be more useful than foreach loops recently. Perhaps this means that for loops are better for sorting since sorting involves a great deal of indexing.
  * QCC
  * q0: How many passes to sort n elements?
  * a0: It takes n-1 passes.
@@ -119,7 +123,6 @@ public class InsertionSort
       System.out.println( "\nArrayList glen before sorting:\n" + glen );
       insertionSortV(glen);
       System.out.println( "\nArrayList glen after sorting:\n" + glen );
-
       ArrayList coco = populate( 10, 1, 1000 );
       System.out.println( "\nArrayList coco before sorting:\n" + coco );
       insertionSortV(coco);
