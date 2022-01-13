@@ -1,3 +1,7 @@
+// Team Aliens Arriving Naughtily: Nakib Abedin + Ameer Alnasser + Alif Rahman
+// APCS pd06
+// HW56: Turing Training Wheels
+// 2022-1-12
 /**
  * A program to carry on conversations with a human user.
  * This version:
