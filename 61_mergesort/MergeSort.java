@@ -26,11 +26,12 @@ public class MergeSort
         output[output_marker] = b[b_marker];
         b_marker ++;
       } else {
-        output[output_marker] = a[a_marker]
+        output[output_marker] = a[a_marker];
         a_marker++;
       }
     output_marker++;
     }
+    return output;
   }//end merge()
 
 
@@ -41,7 +42,8 @@ public class MergeSort
    ******************************************************/
   public static int[] sort( int[] arr )
   {
-    return 0;
+    int[] output = new int[0];
+    return output;
   }//end sort()
 
 
