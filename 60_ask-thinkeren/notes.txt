@@ -1,0 +1,25 @@
+Alif Rahman
+APCS
+HW 60 -- A Termite is-a Turtle, a Thinker is-a Turtle -- Take notes on in class demonstration
+2022-2-7
+time spent: 15 min
+
+DISCO:
+-involving an actual sorting algorithm is time inefficient
+
+QCC: 
+-if i recieved cards, and then gave them away, can I take cards from another thinker
+
+REFLECTION:
+-i feel like class today was an interesting way to teach these sorting concepts
+
+THINKER FIRMWARE:
+-take cards offered by another thinker
+-if you have more than 1 card, split your deck and give each deck to another thinker
+-if you have 1 card, return to thinker who gave it to you
+-if you have 2 decks, merge the 2 decks (keeping them sorted) and then return
+the new deck to the person who gave them to you
+
+how to clean-up:
+-solidify rules on who to give the cards to (preferably the people next to you, not across the room)
+-dont focus on what the group is doing, only focus on your task at hand
