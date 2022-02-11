@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.io.File;
+import java.io.*;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Random;
@@ -17,7 +17,8 @@ public class Review {
   
   private static final String SPACE = " ";
   
-  static{
+  public static void main(String[] args){
+    //add to sentiment
     try {
       Scanner input = new Scanner(new File("cleanSentiment.csv"));
       while(input.hasNextLine()){
@@ -30,8 +31,6 @@ public class Review {
     catch(Exception e){
       System.out.println("Error reading or parsing cleanSentiment.csv");
     }
-  
-  
   //read in the positive adjectives in postiveAdjectives.txt
      try {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
@@ -45,7 +44,6 @@ public class Review {
     catch(Exception e){
       System.out.println("Error reading or parsing postitiveAdjectives.txt\n" + e);
     }   
- 
   //read in the negative adjectives in negativeAdjectives.txt
      try {
       Scanner input = new Scanner(new File("negativeAdjectives.txt"));
@@ -57,6 +55,9 @@ public class Review {
     catch(Exception e){
       System.out.println("Error reading or parsing negativeAdjectives.txt");
     }   
+    System.out.println( totalSentiment("SimpleReview.txt"));
+    System.out.println( starRating("SimpleReview.txt") );
+
   }
   
   /** 
@@ -162,4 +163,43 @@ public class Review {
       return randomNegativeAdj();
     }
   }
+
+//OUR MODS
+public static double totalSentiment( String fileName ) {
+  String content = textToString(fileName);
+  double totalSentiment = 0;
+  
+  int index = 0;
+  while( index < content.length() ){
+    //keep going until space
+    int temp = index;
+    while( index < content.length() && content.charAt(index) != ' '){
+      index++;
+    }
+    //clear punctuation and add sentiment value
+    totalSentiment += sentimentVal( removePunctuation( content.substring(temp, index) ) );
+    index++;
+  }
+
+  return totalSentiment;
+}
+
+public static int starRating(String fileName){
+  double rating = totalSentiment(fileName);
+  if( rating < -5 ){
+    return 1;
+  }
+  else if ( rating < -2){
+    return 2;
+  }
+  else if ( rating < 2){
+    return 3;
+  }
+  else if( rating < 5){
+    return 4;
+  }
+  return 5;
+}
+
+
 }
