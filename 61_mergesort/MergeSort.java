@@ -65,8 +65,8 @@
         b[i] = arr[index + i];
       }
   
-      x = sort(a);
-      y = sort(b);
+      int [] x = sort(a);
+      int [] y = sort(b);
   
       int[] sorted = merge(x, y);
   
