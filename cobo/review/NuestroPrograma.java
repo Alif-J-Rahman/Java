@@ -2,12 +2,12 @@ public class NuestroPrograma {
     public static void main(String[] args) {
         System.out.println("should be...");
         System.out.println("false");
-        System.out.println("false");
+        System.out.println("true");
         System.out.println("true");
         System.out.println("Testing...");
         System.out.println(isExcited("Will you be my valentine!?"));
-        System.out.println(isExcited("lol no "));
-        System.out.println(isExcited("Aww shucks!!"));
+        System.out.println(isExcited("sure!"));
+        System.out.println(isExcited("yay!!"));
     
     } // end of main method
 
