@@ -1,10 +1,21 @@
-q0: From any starting position, can an open tour always be found? Explain.
-        For a knight tour to be successful, a knight must be able to enter and leave all the spaces on the board. Ever space has the potential to be entered and left, therefore making it possible for the open tour to be found.
+Team Nice Lovely Algorithm: Nafiz Labib, Lauren Lee, Alif Rahman
+APCS pd 06
+HW 69 - Making Sense
+2022-03-02
+time spent: 0.5 hrs
+
+
+
+1.
+      q0: From any starting position, can an open tour always be found? Explain.
+        An open knight tour can't be found at every starting position. The simplest explanation is that at some squares, there simply isn't a knight's tour found.
+	Also, in some cases, corners are not being filled up, which makes it harder to fill them later on because they only have two possible squares they can be reached from, which get taken up in the process.
       q1: Same, but for closed tour.
-        A
+        Similar to open tours, some squares don't even have any tours, and corners make it hard to have closed tours because again, there's only two possible squares to be reached from.
       q2: How do you explain the increase in execution time as n increases?
         Each new space on the board increases the run time exponentially. Therefore, as we add more spaces on the board by increasing n, the execution time increases as well.
       q3: Thoughts on optimization?
-        If we know the size of a board, we know how many times the knight can go horizontally/vertically until it reaches a corner. Therefore, we can avoid making the night move in certain configurations (ex If the first move the knight can make is always horizontally left, we can stop it from moving that way if we know its at the left corner) if we know they are doomed.
+        If we know the size of a board, we know how many times the knight can go horizontally/vertically until it reaches a corner. Therefore, we can avoid making the night move in certain configurations (ex If the first move the knight can make is always horizontally left, we can stop it from moving that way if we know it's at the left corner) if we know they are doomed.
+2.
     State your cleanest algo for finding your way out of a maze (of the “2D” style discussed in class).
-      The algorithm is similar to the KnightTour. The user will move either up, down, left or right if the space is moveable. If there is no way for the user to move again, it will backtrack and take a step towards a different direction. If there is no direction in which the user can move that will lead to a solution, the maze is unsolvable.
+      The algorithm is similar to the KnightTour. The user will move either up, down, left or right one square if the space is moveable. If there is no way for the user to move again, it will backtrack and take a step towards a different direction. If there is no direction in which the user can move that will lead to a solution, the maze is unsolvable.
