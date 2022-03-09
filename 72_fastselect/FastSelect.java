@@ -4,6 +4,32 @@
 // 2022-03-08
 // Time spent: .5 hrs
 
+/*
+DISCO:
+- the algorithm is similar to binarySearch
+- once partition is run on a certain pivot, the value of that pivot
+is guarenteed to be at its sorted position
+
+QCC:
+-what is the time complexity?
+-is there way to do this with recursion?
+-is there a better algorightm?
+
+ALGO:
+1- Start is 0 and End is last index of the array. The Pivot value is the mean of the Start and End.
+2- Put all values that are less than arr[Pivot] on to its left side and vice-versa. Then check whether or not
+the new position of the Pivot value == y.
+3- If it does, then return arr[y]. If it is less, then make Start = Pivot+1 and Pivot = mean of Start and End. 
+If it is more, then make End = Pivot-1 and Pivot = mean of Start and End. Repeat steps 2 to 3. 
+
+BEST CASE:
+O(n): the best case is that partition (which has complexity of O(n) ) has to only be run once.
+This is the case when the new position of the original value for pivot == y. 
+
+WORST CASE:
+O(n*n): this is the worst case because the last pivot partitioned is the one that is at position y.
+
+*/
 public class FastSelect {
 
     //--------------v  HELPER METHODS  v--------------
@@ -63,33 +89,32 @@ public class FastSelect {
     }//end mysterion
   
     public static int find( int arr[], int y) {
-          int start = 0;
-          int end = arr.length-1;
-          int pivot = (start+end)/2;
-          y--;
-          System.out.println(start + " and pivot: " + pivot + " and end:" + end);
-          pivot = partition( arr, start, end, pivot);
+          int start = 0; //start index
+          int end = arr.length-1; //end index
+          int pivot = (start+end)/2; //midpoint
+	  System.out.println(start + " and pivot: " + pivot + " and end:" + end);
+          pivot = partition( arr, start, end, pivot); //initial pivot
 
           while( pivot != y ){
-          System.out.println(start + " and pivot: " + pivot + " and end:" + end);
-          if( pivot < y ){
-            start = pivot;
-            pivot =  (start+end)/2;
-          }
-          else{
-            end = pivot;
-            pivot = (start+end)/2;
-          }
-                  pivot = partition( arr, start, end, pivot);
+          	System.out.println("in loop " + start + " and pivot: " + pivot + " and end:" + end);
+          	if( pivot < y ){
+            		start = pivot;
+            		pivot = start + 1;
+          	}
+          	else{
+            		end = pivot;
+            		pivot = end - 1;
+          	}
+            	pivot = partition( arr, start, end, pivot);
         }
           
           return arr[y];
     }
   
       public static void main(String[] args) {
-        int[] arr = new int[]{ 1, 2, 3, 4, 5, 6};
+        int[] arr = new int[]{ 1, 2, 3, 4, 5, 6, 7};
         System.out.println( find(arr, 6) );
-        int[] arr1 = new int[]{ 9823, 47, 326, 920, 7436, 234};
+        int[] arr1 = new int[]{ 9823, 47, 326, 920, 7436, 234, 69};
         System.out.println( find(arr1, 6) );
       }
   
