@@ -11,8 +11,8 @@
  * The Mysterion method ... <YOUR TRIO'S DESCRIPTION HERE> 
  * <p>
  * <b>Note:</b> BLAH blah blah, yakkety schmakketty...
- * @author  Trey Parker, Matt Stone
- * @version 3.1415926535897932384626433
+ * @author  Tom Holland, Zendaya (my gf - Tom Holland)
+ * @version pi
  * @since   2022-03-08t 
  *
  * algo as pseudocode:
@@ -111,7 +111,7 @@ public class Partition
 
     //init test arrays of magic numbers
     int[] arr1 = {3,1,5};
-    partition(arr1, 0, 2, 0);
+    partition(arr1, 0, 0);
     printArr(arr1);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     int[] arr3 = {1,28,33,4982,37};
