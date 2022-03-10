@@ -2,7 +2,7 @@
 // APCS pd8
 // HW72 -- All About Face
 // 2022-03-09
-// Time spent: 1 hr
+// Time spent: .6 hr
 
 /***
  * class QuickSort
@@ -83,12 +83,12 @@ public class QuickSort
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y) 
 
     //get-it-up-and-running, static test case:
     int [] arr1 = {7,1,5,12,3};
     System.out.println("\narr1 init'd to: " );
     printArr(arr1);
+    /*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y) 
 
     qsort( arr1 );
     System.out.println("arr1 after qsort: " );

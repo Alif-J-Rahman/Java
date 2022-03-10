@@ -81,18 +81,24 @@ public class Partition
    * @return int position of 
    *
    */
-  public static int partition( int arr[], int loPos, int hiPos, int pvtPos)
+  public static int partition( int arr[], int loPos, int hiPos)
   {
+    //pivot choosing mechanism, is just make loPos the pivot
+    int pvtPos = loPos;
     int v = arr[pvtPos];
 
+    //move pivot away from the chaos
     swap( pvtPos, hiPos, arr);
     int s = loPos;
 
+    //put everything less than pivot to the left
     for( int i = loPos; i < hiPos; i++ ) {
       if ( arr[i] <= v) {
         swap( i, s, arr );
         s++;}
     }
+
+    //put pivot back
     swap(s,hiPos,arr);
 
     return s;
