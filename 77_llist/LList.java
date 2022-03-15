@@ -20,12 +20,25 @@
  2. Then we check if index is actually in bounds of linked list.
  3. We then check to see if index is 0 as it is a special case. Using the regular add method suffices
  for this case.
- 4. If we reach this point, we know we are adding an item at a specificed index that is not 0.
+ 4. If we reach this point, we know we are adding an item at a specified index that is not 0.
  	4a. We first make tmp point to the node right before the node @ index.
 	4b. Then, we set the next of tmp to a node that contains the cargo we want to add and has a next
 	of node @ index.
 	4c. We increase size.
+
  ALGO REMOVE:
+ 1. First, we create a String variable to store the data that will be deleted.
+ 2. Then, we create tmp to be an alias to head outside of conditionals.
+ 3. Then we check if index is actually in bounds of linked list.
+ 4. We then check to see if index is 0 as it is a special case. A simpler solution can be used here: 
+ oldVal is set to the cargo of _head. we just set _head to its next value.
+ 5. If we reach this point, we know we are removing an item at a specified index that is not 0.
+ 	5a. We first make tmp point to the node right before the node @ index.
+	5b. We then set oldVal to the cargo of the node that will be removed.
+	5c. We then set the next of tmp to the node after the node after it, therefore removing the node 
+	after it.
+	5d. We decrease size.
+	5e. We return oldVal (the data that was removed).
  **/
 
 public class LList implements List //interface def must be in this dir
@@ -86,8 +99,9 @@ public class LList implements List //interface def must be in this dir
         //makes tmp point to the node right before the node @ index
         for (int i = 0; i < index - 1; i++)
             tmp = tmp.getNext();
-        //sets the next of tmp to the node after the node after it, therefore removing the node after it
-        tmp.setNext(tmp.getNext().getNext());
+        oldVal = tmp.getNext().getCargo(); //sets oldVal to the cargo of the node that will be removed.
+	tmp.setNext(tmp.getNext().getNext()); //sets the next of tmp to the node after the node after
+	    				      //it, therefore removing the node after it.
         _size--;
     }
     return oldVal; //return the data that was removed
