@@ -130,7 +130,6 @@ public class LList implements List //interface def must be in this dir
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    String retVal;
     LLNode tmp = _head; //create alias to head
 
     //walk to desired node
