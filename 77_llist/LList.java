@@ -1,14 +1,31 @@
-import javax.lang.model.util.ElementScanner14;
-
 //Froghats: Kevin Cheng, Salaj Rijal, Alif Rahman
 //APCS pd8
-//HW77 -- 
+//HW77 -- Insert|Remove
 //2022-03-15t
-//time spent: 1h
+//KTS Consumed: 1 (But it was ms paint not an actual KTS)
+//Time spent: 1h
 
 /***
  * class LList
  * Implements a linked list of LLNodes, each containing String data
+ 
+ Disco: 
+ Having two pointers allows for traversing through the linked list without deleting portions of it.
+ 
+ QCC:
+ Was implementing the getNode helper method necessary?
+ 
+ ALGO ADD:
+ 1. First we create tmp to be an alias to head outside of conditionals.
+ 2. Then we check if index is actually in bounds of linked list.
+ 3. We then check to see if index is 0 as it is a special case. Using the regular add method suffices
+ for this case.
+ 4. If we reach this point, we know we are adding an item at a specificed index that is not 0.
+ 	4a. We first make tmp point to the node right before the node @ index.
+	4b. Then, we set the next of tmp to a node that contains the cargo we want to add and has a next
+	of node @ index.
+	4c. We increase size.
+ ALGO REMOVE:
  **/
 
 public class LList implements List //interface def must be in this dir
