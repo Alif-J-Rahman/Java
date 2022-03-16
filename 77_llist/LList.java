@@ -66,6 +66,7 @@ public class LList implements List //interface def must be in this dir
     return true;
   }
 
+  
   public void add( int index, String newVal)
   {
     LLNode tmp = _head; //create alias to head
@@ -79,10 +80,11 @@ public class LList implements List //interface def must be in this dir
         for (int i = 0; i < index - 1; i++)
             tmp = tmp.getNext();
         //set the next of tmp to a node that contains the cargo we want to add and has a next of node @ index
-        tmp.setNext(new LLNode( newVal, getNode(index) ));
+        tmp.setNext(new LLNode( newVal, tmp.getNext() ));
         _size++;
     }
   }
+
 
   public String remove( int index )
   {
@@ -107,6 +109,7 @@ public class LList implements List //interface def must be in this dir
     return oldVal; //return the data that was removed
   }
 
+
   public String get( int index )
   {
     if ( index < 0 || index >= size() )
@@ -124,20 +127,6 @@ public class LList implements List //interface def must be in this dir
     return retVal;
   }
 
-  //helper method to get node at specific index instead of cargo
-  public LLNode getNode( int index )
-  {
-    if ( index < 0 || index >= size() )
-      throw new IndexOutOfBoundsException();
-
-    LLNode tmp = _head; //create alias to head
-
-    //walk to desired node
-    for( int i=0; i < index; i++ )
-      tmp = tmp.getNext();
-
-    return tmp;
-  }
 
   public String set( int index, String newVal )
   {
