@@ -66,7 +66,7 @@ public class LList implements List //interface def must be in this dir
     return true;
   }
 
-  
+
   public void add( int index, String newVal)
   {
     LLNode tmp = _head; //create alias to head
@@ -102,7 +102,7 @@ public class LList implements List //interface def must be in this dir
         for (int i = 0; i < index - 1; i++)
             tmp = tmp.getNext();
         oldVal = tmp.getNext().getCargo(); //sets oldVal to the cargo of the node that will be removed.
-	tmp.setNext(tmp.getNext().getNext()); //sets the next of tmp to the node after the node after
+      	tmp.setNext(tmp.getNext().getNext()); //sets the next of tmp to the node after the node after
 	    				      //it, therefore removing the node after it.
         _size--;
     }
