@@ -44,7 +44,7 @@ public class ItrWork
   //returns a boolean to indicate whether key is present in L
   public static boolean foundA( Integer key, List<Integer> L )
   {
-    for (Integer i : L) {
+    for ( Integer i : L ) {
         if( i.equals(key) ){
             return true;
         }
@@ -56,11 +56,9 @@ public class ItrWork
   //returns a boolean to indicate whether key is present in L
   public static boolean foundB( Integer key, List<Integer> L )
   {
-    Integer current;
-    Iterator<Integer> i = L.iterator();
-    while ( i.hasNext() ) {
-      current = i.next();
-      if (current.equals(key)) {
+    Iterator<Integer> itr = L.iterator();
+    while ( itr.hasNext() ) {
+      if ( itr.next().equals(key) ) {
         return true;
       }
     }
@@ -83,13 +81,11 @@ public class ItrWork
   public static List<Integer> oddsB( List<Integer> L )
   {
     List<Integer> result = new ArrayList<Integer>();
-    Iterator<Integer> i = L.iterator();
-    Integer element;
-    while ( i.hasNext() ){
-      element = i.next();
-      if ( element%2==1 ) {
-        result.add(element);
-      }
+    Iterator<Integer> itr = L.iterator();
+    Integer i;
+    while ( itr.hasNext() ){
+      i = itr.next();
+      if ( i%2==1 ) result.add(i);
     }
     return result;
   }
@@ -107,7 +103,7 @@ public class ItrWork
   public static void main( String [] args )
   {
     
-    //var type: List   obj type: ?
+    //var type: List   obj type: Integer
     List<Integer> L = new ArrayList<Integer>();
     for( int i = 0; i < 10; i++ )
     L.add(i);
@@ -121,7 +117,6 @@ public class ItrWork
     while( itr.hasNext() ){
       System.out.println( itr.next() );
     }
-
     
     System.out.println("\nTesting foundA...");
     System.out.println("9 in L? -> " + foundA(9,L) );
