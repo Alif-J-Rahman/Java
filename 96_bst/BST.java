@@ -153,16 +153,26 @@ public class BST
       return 1 + Math.max( height(root.getLeft()), height(root.getRight()) );
     }
 
+    public int numNodes()
+    {
+      return numNodes( _root );
+    }
+
+    public int numNodes( TreeNode root ){
+        if ( root == null ) return 0;
+        return 1 + numNodes( root.getLeft() ) + numNodes( root.getRight() );
+    }
+
     public int numLeaves()
     {
       return numLeaves( _root );
     }
 
-    public int numLeaves( TreeNode root ){
-        if( root == null ) return 0;
-        return 1 + numLeaves( root.getLeft() ) + numLeaves( root.getRight() );
+    public int numLeaves( TreeNode root){
+      if ( root == null ) return 0;
+      if ( root.getLeft() == null && root.getRight() == null) return 1;
+      return numLeaves( root.getLeft() ) + numLeaves ( root.getRight() );
     }
-
 
   //main method for testing
   public static void main( String[] args )
@@ -185,12 +195,14 @@ public class BST
 
 
     System.out.println( arbol.height() );
-    System.out.println( arbol.numLeaves()  );
+    System.out.println( arbol.numNodes()  );
+    System.out.println( arbol.numLeaves() );
 
 /*
 EXPECTING
 height: 3
 nodes: 6
+leaves: 3
             4
            / \
           2    5
