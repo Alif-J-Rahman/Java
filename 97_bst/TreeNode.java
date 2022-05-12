@@ -20,8 +20,7 @@ public class TreeNode
    */
   TreeNode( int initValue )
   {
-	_cargo = initValue;
-	_lt = _rt = null;
+    _cargo = initValue;
   }
 
 
@@ -31,9 +30,9 @@ public class TreeNode
    */
   TreeNode( int initValue, TreeNode initLeft, TreeNode initRight )
   {
-	_cargo = initValue;
-  _lt = initLeft;
-  _rt = initRight;
+    this(initValue);
+    _lt = initLeft;
+    _rt = initRight;
   }
 
 
@@ -42,8 +41,7 @@ public class TreeNode
    */
   TreeNode getLeft()
   {
-  /*** YOUR IMPLEMENTATION HERE ***/
-	return _lt;
+    return _lt;
   }
 
 
@@ -52,8 +50,7 @@ public class TreeNode
    */
   TreeNode getRight()
   {
-  /*** YOUR IMPLEMENTATION HERE ***/
-	return _rt;
+    return _rt;
   }
 
 
@@ -62,8 +59,7 @@ public class TreeNode
    */
   int getValue()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
-	return _cargo;
+    return _cargo;
   }
 
 
@@ -90,7 +86,6 @@ public class TreeNode
    */
   void setValue( int theNewValue ) 
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
     _cargo = theNewValue;
   }
 
