@@ -1,1 +1,11 @@
+Flying Sullen Actors
+Roster: Alif Rahman, Salaj Rijal, Faiyaz Rafee
+APCS
+HW101 --  Heap o'Trouble
+2022-05-16
+time spent: .5 hours
 
+if root is null, make root the desiered node
+if root has no children, make left subtree desired node
+if root has only right subtree, make right subtree desired node
+if root has both, call insert on left subtree.
