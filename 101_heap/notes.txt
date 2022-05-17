@@ -1,1 +1,13 @@
+Flying Sullen Actors
+Roster: Alif Rahman, Salaj Rijal, Faiyaz Rafee
+APCS
+HW101 --  Heap o'Trouble
+2022-05-16
+time spent: .5 hours
 
+DISCO:
+minHeap has a O(1) retriveal of the smallest number in the heap
+similarities to priority queue
+
+QCC:
+how do we know which subtree to insert to first (we just did left subtree first for no reason)?
