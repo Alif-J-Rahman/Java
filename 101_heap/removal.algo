@@ -1,1 +1,12 @@
+Flying Sullen Actors
+Roster: Alif Rahman, Salaj Rijal, Faiyaz Rafee
+APCS
+HW101 --  Heap o'Trouble
+2022-05-16
+time spent: .5 hours
 
+if no children, make node null
+if one child, make node that one child (2 subcases: one child could be right subtree or one child 
+could be left subtree
+if two children, set node to value of the least child. then set the subtree of least value to the return of the 
+remove of the that subtree (removing the least value).
